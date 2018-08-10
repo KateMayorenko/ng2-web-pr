@@ -23,9 +23,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../ng2-web-pr/node_modules/bootstrap/dist/css/bootstrap.min.css"
+
             ],
-            "scripts": []
+            "scripts": [
+              "../ng2-web-pr/node_modules/jquery/dist/jquery.min.js",
+            "../ng2-web-pr/node_modules/bootstrap/dist/js/bootstrap.js"
+
+
+            ]
           },
           "configurations": {
             "production": {
