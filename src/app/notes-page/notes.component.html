@@ -1,17 +1,7 @@
-<div class="jumbotron">
+<div class="container">
  <div class="row">
-<div class="col-md-3">
-  <h5 class="align-content-center">Recent attachments</h5>
-  <ul class="nav flex-column">
-
-      <app-attach *ngFor ="let file of _files;let indx = index;" [fileItem]="file"></app-attach>
-
-  </ul>
-</div>
-
-
-<div class="col-md-9">
-  <h5 class="align-content-center">Recent 10 notes</h5>
+<div class="col-md-12">
+  <h5 class="align-content-center">All notes:</h5>
 
    <app-note *ngFor ="let item of _list | pipeSearch: _searchNote ;let indx = index" [noteItem]="item"></app-note>
 

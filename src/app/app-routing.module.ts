@@ -1,23 +1,20 @@
 import {NgModule} from '@angular/core';
 import {NotesComponent} from './notes-page/notes.component';
-import {AttachComponent} from './attach/attach.component';
 import {RouterModule, Routes} from '@angular/router';
 import {LinksComponent} from './links-page/links.component';
+import {HomePageComponent} from './home-page/home-page.component';
 
 const appRoutes: Routes = [
 
-  /*localhost:4200/notes-page*/
+  {
+    path: '', component: HomePageComponent
+
+  },
 
   {
     path: 'notes', component: NotesComponent
 
   },
-
-  {
-    path: '', component: NotesComponent
-
-  },
-
 
   /*localhost:4200/attach*/
   {

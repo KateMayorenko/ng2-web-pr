@@ -2,6 +2,7 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, ViewChild} from '@an
 import {SearchService} from '../search.service';
 
 
+
 @Component({
   selector: 'app-note',
   templateUrl: './note.component.html',
@@ -32,9 +33,5 @@ export class NoteComponent implements OnInit {
     this.service.list.splice(index, 1);
     this.service.files.splice(index, 1);
   }
-
-
-
-
 
 }

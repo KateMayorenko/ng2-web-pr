@@ -9,6 +9,6 @@ export class AttachComponent {
 
   constructor() { }
 
-  @Input() fileItem: {name: string};
+  @Input('fileItem') fileItem: {name: string};
 
 }
