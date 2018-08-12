@@ -1,4 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, ViewChild} from '@angular/core';
+import {SearchService} from '../search.service';
 
 
 @Component({
@@ -8,29 +9,12 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, ViewChild} from '@an
 })
 
 
-export class NoteComponent {
-
-  constructor() { }
-
- @Input() noteItem: {name: string, date: string, attach: any, isRemoved: boolean};
-
-  removeNote() {
+export class NoteComponent implements OnInit {
 
 
-  }
+ @Input() noteItem: {name: string, date: string, attach: any, type: string, isRemoved: boolean};
 
-  changeNote() {
-
-
-    console.log('change note is pushed');
-  }
-
-  addCategory() {
-
-    console.log('add category is pushed');
-  }
-
-  getClass() {
+ getClass() {
     return{
       'list-group-item' : !this.noteItem.isRemoved,
       'hidden' : this.noteItem.isRemoved,
@@ -38,4 +22,19 @@ export class NoteComponent {
 
     };
   }
+
+  constructor(private service: SearchService) {}
+
+  ngOnInit() {
+  }
+
+  removeNote(note, index) {
+    this.service.list.splice(index, 1);
+    this.service.files.splice(index, 1);
+  }
+
+
+
+
+
 }

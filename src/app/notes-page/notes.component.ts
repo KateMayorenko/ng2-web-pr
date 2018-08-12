@@ -35,20 +35,20 @@ export class NotesComponent implements OnInit {
 
   constructor(private service: SearchService) { }
 
-  updateNoteList(note: {name: string, date: string, attach: any, isRemoved: boolean}) {
+/*  updateNoteList(note: {name: string, date: string, attach: any, isRemoved: boolean}) {
       this._list.push(note);
       this._files.push(note.attach);
 
-  }
+  }*/
 
-    ngOnInit() {
+  ngOnInit() {
 
     this._files = this.service.files;
     this._list = this.service.list;
     this._searchNote = this.service.searchNote;
 
    // console.log(this._list);
-    console.log(this.service.searchNote + ' notes');
+
 
   }
 

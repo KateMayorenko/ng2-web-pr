@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {SearchService} from '../search.service';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-top-menu',
@@ -9,14 +9,9 @@ import {SearchService} from '../search.service';
 })
 export class TopMenuComponent implements OnInit {
 
-
-  _searchNote = '';
-
-  constructor(private service: SearchService) {}
-
   ngOnInit() {
 
-    this.service.searchNote = this._searchNote;
+
 
 
   }
