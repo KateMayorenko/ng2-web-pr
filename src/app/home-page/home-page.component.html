@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-md-3">
+      <h5 class="align-content-center">Recent Users</h5>
+      <ul class="nav flex-column">
+
+        <app-attach *ngFor ="let user of _users;let indx = index;" [userItem]="user"></app-attach>
+
+      </ul>
+      <button class="btn btn-outline-primary" (click)="openAttachPage()">Open all users</button>
+    </div>
+
+
+    <div class="col-md-9">
+      <h5 class="align-content-center">Recent cars</h5>
+
+      <app-note *ngFor ="let item of _cars;let indx = index" [carItem]="item"></app-note>
+
+      <button class="btn btn-outline-primary center" (click)="openNotePage()">Open all cars</button>
+
+    </div>
+  </div>
+</div>

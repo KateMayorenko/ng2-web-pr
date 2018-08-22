@@ -8,7 +8,7 @@ import {ConsoleService} from './console.service';
   providers: [SearchService, ConsoleService]
 })
 export class AppComponent {
-  title = 'Fast Notebook';
+  title = 'Car Service';
 
   constructor(private service: SearchService) {}
 

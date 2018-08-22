@@ -13,12 +13,11 @@ import {SearchService} from '../search.service';
 export class NoteComponent implements OnInit {
 
 
- @Input() noteItem: {name: string, date: string, attach: any, type: string, isRemoved: boolean};
+ @Input() carItem: {model: string, engine: string, system: string, design: string, location: string};
 
  getClass() {
     return{
-      'list-group-item' : !this.noteItem.isRemoved,
-      'hidden' : this.noteItem.isRemoved,
+
       'list-group-item-success' : true
 
     };
@@ -29,9 +28,9 @@ export class NoteComponent implements OnInit {
   ngOnInit() {
   }
 
-  removeNote(note, index) {
-    this.service.list.splice(index, 1);
-    this.service.files.splice(index, 1);
+  removeCar(note, index) {
+    this.service.cars.splice(index, 1);
+
   }
 
 }

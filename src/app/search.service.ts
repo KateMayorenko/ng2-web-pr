@@ -10,41 +10,48 @@ export class SearchService {
 
   constructor(private consoleSevice: ConsoleService) {}
 
-  list: {
-      name: string, date: string, attach: any, type: string, isRemoved: boolean}[] = [{
-      name: 'Note about Family',
-      date: '21.12.2014',
-      attach: 'fileName',
-      type: 'Home',
-      isRemoved: false
+  cars: {
+      model: string, engine: string, system: any, design: string, location: string}[] = [{
+    model: 'Audi',
+    engine: 'unknown',
+    system: 'yes',
+    design: 'Colored',
+    location: 'Munich',
 
-    },
-      {
-        name: 'Note about Life',
-        date: '21.12.2015',
-        attach: 'fileName',
-        type: 'Home',
-        isRemoved: false
-      },
-      {
-        name: 'Note about Work',
-        date: '21.12.2016',
-        attach: 'fileName',
-        type: 'Home',
-        isRemoved: false
-      }];
+    }];
 
 
-  files: { name: string}[] = [];
+  users: { name: string, gender: string, age: string, mob_on_dem: boolean}[] = [
+    {
+      name: 'John',
+      gender: 'Male',
+      age: '21',
+      mob_on_dem: false,
 
-  addNote(name: string, date: string, attach: any, type: string, isRemoved: boolean) {
+  }
+  ];
 
-    this.list.push({
+  addCar(model: string, engine: string, system: any, design: string, location: string) {
+
+    this.cars.push({
+      model,
+      engine,
+      system,
+      design,
+      location
+
+    });
+
+    this.consoleSevice.log(localStorage.getItem(model));
+
+  }
+  addUser(name: string, gender: string, age: string, mob_on_dem: boolean) {
+
+    this.users.push({
       name,
-      date,
-      attach,
-      type,
-      isRemoved: false
+      gender,
+      age,
+      mob_on_dem
 
     });
 
@@ -52,10 +59,10 @@ export class SearchService {
 
   }
 
-  setLocalStorage(noteItem, noteStr) {
+  setLocalStorage(carItem, carStr) {
 
-    noteStr = JSON.stringify(noteItem);
-    localStorage.setItem('data', noteStr);
+    carStr = JSON.stringify(carItem);
+    localStorage.setItem('data', carStr);
   }
 
   getFromLocalStorage(finalItem, finalStr) {
@@ -64,23 +71,15 @@ export class SearchService {
     finalItem = JSON.parse(finalStr);
   }
 
-  addFiles(name: string) {
-    this.files.push({
-      name
-    });
-  }
 
-
-
-
-  /*removeNote(item, index) {
-    this.list.splice(index, 1);
+  /*removeCar(item, index) {
+    this.cars.splice(index, 1);
   }*/
 
- /* changeNoteInList() {
+ /* changeItemInCars() {
 
 
-    console.log('change note is pushed');
+    console.log('change car is pushed');
   }*/
 
 }

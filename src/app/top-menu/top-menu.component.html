@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Notebook</a>
+  <a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">CarService</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -10,19 +10,19 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalText">New note</button>
+        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalText">New car</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink] = "'/notes'">Notes</a>
+        <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalText2">New user</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink] = "'/link'" routerLinkActive="active">Attachments</a>
+        <a class="nav-link" [routerLink] = "'/cars'">Cars</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink] = "'/users'" routerLinkActive="active">Users</a>
       </li>
         </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name ="searchNote" [(ngModel)] = "_searchNote">
-    </form>
-  </div>
+    </div>
 </nav>
 
 
@@ -49,6 +49,6 @@
   })
   $('#last-button').on('click', function(){
     $('#finalText').visible;
-    $('#finalText').innerText('Note is added');
+    $('#finalText').innerText('Car is added');
   })
   </script>

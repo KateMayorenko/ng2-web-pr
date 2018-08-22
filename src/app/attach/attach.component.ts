@@ -9,6 +9,6 @@ export class AttachComponent {
 
   constructor() { }
 
-  @Input('fileItem') fileItem: {name: string};
+  @Input('userItem') userItem: {name: string, gender: string, age: string, mob_on_dem: boolean, carId: string, demandId: string};
 
 }

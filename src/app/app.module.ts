@@ -12,6 +12,7 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
 import { NoteAddComponent } from './note-add/note-add.component';
 import { LinksComponent } from './links-page/links.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { UserAddComponent } from './user-add/user-add.component';
 
 
 
@@ -26,7 +27,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     TopMenuComponent,
     NoteAddComponent,
     LinksComponent,
-    HomePageComponent
+    HomePageComponent,
+    UserAddComponent
 
 
   ],

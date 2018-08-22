@@ -12,13 +12,13 @@ const appRoutes: Routes = [
   },
 
   {
-    path: 'notes', component: NotesComponent
+    path: 'cars', component: NotesComponent
 
   },
 
   /*localhost:4200/attach*/
   {
-    path: 'link', component: LinksComponent
+    path: 'links', component: LinksComponent
   }];
 
 @NgModule({
