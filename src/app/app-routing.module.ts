@@ -1,8 +1,9 @@
 import {NgModule} from '@angular/core';
-import {NotesComponent} from './notes-page/notes.component';
+import {CarsPageComponent} from './cars-page/cars-page.component';
 import {RouterModule, Routes} from '@angular/router';
-import {LinksComponent} from './links-page/links.component';
+import {UsersPageComponent} from './users-page/users-page.component';
 import {HomePageComponent} from './home-page/home-page.component';
+
 
 const appRoutes: Routes = [
 
@@ -12,13 +13,13 @@ const appRoutes: Routes = [
   },
 
   {
-    path: 'cars', component: NotesComponent
+    path: 'cars', component: CarsPageComponent
 
   },
 
-  /*localhost:4200/attach*/
+  /*localhost:4200/user*/
   {
-    path: 'links', component: LinksComponent
+    path: 'users', component: UsersPageComponent
   }];
 
 @NgModule({

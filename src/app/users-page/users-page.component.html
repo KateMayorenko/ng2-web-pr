@@ -1,0 +1,11 @@
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="align-content-center">All users:</h5>
+
+            <app-user *ngFor ="let user of _users;let indx = index;" [userItem]="user">{{indx}}</app-user>
+
+          </div>
+        </div>
+      </div>

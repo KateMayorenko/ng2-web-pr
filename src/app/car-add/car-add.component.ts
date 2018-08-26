@@ -1,14 +1,14 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {SearchService} from '../search.service';
+import {MainService} from '../main.service';
 
 @Component({
-  selector: 'app-note-add',
-  templateUrl: './note-add.component.html',
-  styleUrls: ['./note-add.component.css'],
+  selector: 'app-car-add',
+  templateUrl: './car-add.component.html',
+  styleUrls: ['./car-add.component.css'],
  // providers: [SearchService]
 })
 
-export class NoteAddComponent implements OnInit {
+export class CarAddComponent implements OnInit {
 
   itemModel = '';
   itemEngine = '';
@@ -17,9 +17,9 @@ export class NoteAddComponent implements OnInit {
   itemLocation = '';
   _files = [];
 
-// @Output('outputNote') outputNote = new EventEmitter<{name: string, date: string, attach: any, isRemoved: boolean}>();
+// @Output('outputNote') outputNote = new EventEmitter<{name: string, date: string, user: any, isRemoved: boolean}>();
 
-  constructor(private service: SearchService) { }
+  constructor(private service: MainService) { }
 
 
   addCar(obj) {

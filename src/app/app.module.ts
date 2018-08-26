@@ -2,15 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NotesComponent } from './notes-page/notes.component';
-import {FormsModule} from '@angular/forms';
-import { NoteComponent } from './note/note.component';
-import {AppRoutingModule} from './app-routing.module';
-import {AttachComponent} from './attach/attach.component';
+import { CarsPageComponent } from './cars-page/cars-page.component';
+import { FormsModule} from '@angular/forms';
+import { CarComponent } from './car/car.component';
+import { AppRoutingModule} from './app-routing.module';
+import { UserComponent} from './user/user.component';
 import { PipeSearchPipe } from './pipe-search.pipe';
 import { TopMenuComponent } from './top-menu/top-menu.component';
-import { NoteAddComponent } from './note-add/note-add.component';
-import { LinksComponent } from './links-page/links.component';
+import { CarAddComponent } from './car-add/car-add.component';
+import { UsersPageComponent } from './users-page/users-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { UserAddComponent } from './user-add/user-add.component';
 
@@ -20,13 +20,13 @@ import { UserAddComponent } from './user-add/user-add.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NotesComponent,
-    NoteComponent,
-    AttachComponent,
+    CarsPageComponent,
+    CarComponent,
+    UserComponent,
     PipeSearchPipe,
     TopMenuComponent,
-    NoteAddComponent,
-    LinksComponent,
+    CarAddComponent,
+    UsersPageComponent,
     HomePageComponent,
     UserAddComponent
 

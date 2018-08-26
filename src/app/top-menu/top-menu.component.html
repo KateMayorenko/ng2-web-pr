@@ -5,50 +5,63 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
 
 
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
+
       <li class="nav-item active">
-        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#modalText">New car</button>
+        <button class="btn btn-outline-primary " data-toggle="modal" data-target="#modalTextCar">New car</button>
       </li>
+
       <li class="nav-item">
-        <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#modalText2">New user</button>
+        <button class="btn btn-outline-secondary " data-toggle="modal" data-target="#modalTextUser">New user</button>
       </li>
+
+
       <li class="nav-item">
         <a class="nav-link" [routerLink] = "'/cars'">Cars</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink] = "'/users'" routerLinkActive="active">Users</a>
       </li>
+      <li>
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name ="searchNote" [(ngModel)] = "_searchNote">
+      </form></li>
         </ul>
     </div>
 </nav>
 
 
-<div class="modal fade" id="modalText" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalTextCar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelCar" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New note</h5>
+        <h5 class="modal-title" id="exampleModalLabelCar">New car</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
-        <app-note-add></app-note-add>
+        <app-car-add></app-car-add>
 
     </div>
   </div>
 </div>
 
-<script>
-  $('#finalText').hidden;
-  $('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
-  $('#last-button').on('click', function(){
-    $('#finalText').visible;
-    $('#finalText').innerText('Car is added');
-  })
-  </script>
+<div class="modal fade" id="modalTextUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelUser" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelUser">New user</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <app-user-add></app-user-add>
+
+    </div>
+  </div>
+</div>

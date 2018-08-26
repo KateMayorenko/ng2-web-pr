@@ -1,14 +1,16 @@
 import {ConsoleService} from './console.service';
 import {Injectable} from '@angular/core';
+import {PipeSearchPipe} from './pipe-search.pipe';
 
 
 @Injectable()
 
-export class SearchService {
+export class MainService  {
 
   searchNote = '';
 
-  constructor(private consoleSevice: ConsoleService) {}
+  constructor(private consoleService: ConsoleService) {
+}
 
   cars: {
       model: string, engine: string, system: any, design: string, location: string}[] = [{
@@ -42,7 +44,6 @@ export class SearchService {
 
     });
 
-    this.consoleSevice.log(localStorage.getItem(model));
 
   }
   addUser(name: string, gender: string, age: string, mob_on_dem: boolean) {
@@ -55,7 +56,6 @@ export class SearchService {
 
     });
 
-    this.consoleSevice.log(localStorage.getItem(name));
 
   }
 

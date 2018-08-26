@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {SearchService} from '../search.service';
+import {MainService} from '../main.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ export class TopMenuComponent implements OnInit {
 
   _searchNote = '';
 
-  constructor(private service: SearchService) {}
+  constructor(private service: MainService) {}
 
   ngOnInit() {
     this._searchNote = this.service.searchNote;

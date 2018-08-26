@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {SearchService} from '../search.service';
+import {MainService} from '../main.service';
+import {ConsoleService} from '../console.service';
+
 
 @Component({
   selector: 'app-user-add',
@@ -13,17 +15,17 @@ export class UserAddComponent implements OnInit {
   userAge = '';
   mob_on_dem: false;
 
-  constructor(private service: SearchService) { }
+  constructor(private service: MainService, private consoleService: ConsoleService) { }
 
 
   addUser(obj) {
     this.service.addUser(this.userName, this.userGender, this.userAge, this.mob_on_dem);
 
     obj = {
-      model: this.userName,
-      engine: this.userGender,
-      system: this.userAge,
-      design: this.mob_on_dem,
+      name: this.userName,
+      gender: this.userGender,
+      age: this.userAge,
+      mob: this.mob_on_dem,
     };
 
     this.service.setLocalStorage(obj, 'data');
@@ -35,6 +37,10 @@ export class UserAddComponent implements OnInit {
     this.userAge = '';
     this.mob_on_dem = false;
 
+  }
+
+  submitForm(form: HTMLFormElement) {
+   this.consoleService.log(form + ' is submitted');
   }
 
   ngOnInit() {

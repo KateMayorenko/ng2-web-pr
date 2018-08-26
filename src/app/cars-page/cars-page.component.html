@@ -1,0 +1,10 @@
+<div class="container">
+ <div class="row">
+<div class="col-md-12">
+   <h5 class="align-content-center">All cars:</h5>
+
+   <app-car *ngFor ="let item of _cars | pipeSearch: _searchNote ;let indx = index" [carItem]="item"></app-car>
+
+</div>
+  </div>
+</div>

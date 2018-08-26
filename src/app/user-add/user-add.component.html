@@ -1,27 +1,45 @@
 <div class="modal-body">
-  <form>
+  <form (ngSubmit) = "submitForm()" #form = "ngForm">
     <div class="form-group">
-      <label for="type" class="col-form-label">Name:</label>
-      <select class="form-control" id="type" type="file" placeholder="Model..." [(ngModel)] = "userName" [ngModelOptions]="{standalone: true}">
-        <option>BMW</option>
-        <option>Audi</option>
-        <option>Renault</option>
+      <label for="name" class="col-form-label">Name:</label>
+      <input class="form-control"
+             id="name"
+             type="text"
+             placeholder="Name..."
+             [(ngModel)] = "userName"
+             [ngModelOptions]="{standalone: true}">
+    </div>
+    <label for="age" class="col-form-label">Gender:</label>
+    <select class="form-control"
+            id="gender"
+            type="text"
+            placeholder="Gender..."
+            [(ngModel)] = "userGender"
+            [ngModelOptions]="{standalone: true}">
+      <option selected>Male</option>
+      <option>Female</option>
+      <option>N/A</option>
       </select>
-    </div>
-    <div class="form-group">
-      <label for="gender" class="col-form-label">Gender:</label>
-      <input class="form-control" id="gender" type="text" placeholder="Engine..." [(ngModel)] = "userGender" [ngModelOptions]="{standalone: true}">
-    </div>
     <div class="form-group">
       <label for="age" class="col-form-label">Age:</label>
-      <input class="form-control" id="age" type="text" placeholder="System..." [(ngModel)] = "userAge" [ngModelOptions]="{standalone: true}">
+      <input class="form-control"
+             id="age"
+             type="text"
+             placeholder="Age..."
+             [(ngModel)] = "userAge"
+             [ngModelOptions]="{standalone: true}">
     </div>
     <div class="form-group">
       <label for="mob" class="col-form-label">Mobility:</label>
-      <select class="form-control" id="mob" type="text" placeholder="Model..." [(ngModel)] = "mob_on_dem" [ngModelOptions]="{standalone: true}">
-        <option>BMW</option>
-        <option>Audi</option>
-        <option>Renault</option>
+      <select class="form-control"
+              id="mob"
+              type="text"
+              placeholder="Mobility..."
+              [(ngModel)] = "mob_on_dem"
+              [ngModelOptions]="{standalone: true}">
+        <option>Need</option>
+        <option>Don't need</option>
+
       </select>
     </div>
 

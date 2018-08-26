@@ -1,16 +1,16 @@
 import {Component} from '@angular/core';
-import {SearchService} from './search.service';
+import {MainService} from './main.service';
 import {ConsoleService} from './console.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [SearchService, ConsoleService]
+  providers: [MainService, ConsoleService]
 })
 export class AppComponent {
   title = 'Car Service';
 
-  constructor(private service: SearchService) {}
+  constructor(private service: MainService) {}
 
 
 }

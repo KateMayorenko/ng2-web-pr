@@ -1,16 +1,16 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, ViewChild} from '@angular/core';
-import {SearchService} from '../search.service';
+import {MainService} from '../main.service';
 
 
 
 @Component({
-  selector: 'app-note',
-  templateUrl: './note.component.html',
-  styleUrls: ['./note.component.css']
+  selector: 'app-car',
+  templateUrl: './car.component.html',
+  styleUrls: ['./car.component.css']
 })
 
 
-export class NoteComponent implements OnInit {
+export class CarComponent implements OnInit {
 
 
  @Input() carItem: {model: string, engine: string, system: string, design: string, location: string};
@@ -18,17 +18,17 @@ export class NoteComponent implements OnInit {
  getClass() {
     return{
 
-      'list-group-item-success' : true
+      'list-group-item' : true
 
     };
   }
 
-  constructor(private service: SearchService) {}
+  constructor(private service: MainService) {}
 
   ngOnInit() {
   }
 
-  removeCar(note, index) {
+  removeCar(car, index) {
     this.service.cars.splice(index, 1);
 
   }

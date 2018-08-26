@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SearchService} from '../search.service';
+import {MainService} from '../main.service';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class HomePageComponent implements OnInit {
   _cars = [];
   _users = [];
 
-  constructor(private service: SearchService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private service: MainService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this._cars = this.service.cars;
@@ -20,12 +20,12 @@ export class HomePageComponent implements OnInit {
   }
 
 
-  openAttachPage() {
-    this.router.navigate(['links'], {relativeTo: this.route});
+  openUsersPage() {
+    this.router.navigate(['users'], {relativeTo: this.route});
 
   }
 
-  openNotePage() {
+  openCarsPage() {
     this.router.navigate(['cars'], {relativeTo: this.route});
   }
 
